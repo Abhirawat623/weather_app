@@ -1,7 +1,9 @@
 import {Link} from "react-router-dom"
 import { useModal } from "../context/modal-context"
-import { LocationModal } from "../components/LocationModal";
-import { Footer } from "../components/Footer";
+import { LocationModal } from "../components/LocationModal"
+import { Footer } from "../components/Footer"
+import {Toaster} from "alert"
+import {Weather} from "../components/Weather"
 export const Welcome =()=>{
     const {isLocationModalOpen, setIsLocationModalOpen} =useModal();
  //modal open
@@ -20,6 +22,10 @@ setIsLocationModalOpen(true)
         </div>
         
        <div> {isLocationModalOpen && <LocationModal />}</div>
-       <Footer/></div>
+       <Footer/>
+       <Weather/>
+       <Toaster/>
+       </div>
+       
     )
 }
