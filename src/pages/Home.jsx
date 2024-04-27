@@ -1,18 +1,19 @@
-// import { useLocation } from "../context/location-context";
+import { useLocation } from "../context/location-context";
 import { Temperature } from "../components/Temperature";
-// import { Weather } from "../components/Weather";
-import {Humidity} from "../components/Humidity"
+import { Weather } from "../components/Weather";
+import { Humidity } from "../components/Humidity";
+import { Fragment } from "react";
+
 export const Home = () => {
-  //location context
-  // const {location,data}=useLocation()
-  // console.log(data)
+  // location context
+  const {data}=useLocation()
+console.log(data)
+
   return (
-    <section>
-      <Temperature />
-      <Humidity/>
-      <div className="absolute right-6 top-10">
-        {/* <Weather /> */}
-      </div>
-    </section>
+    <Fragment >
+      <Temperature temp={data.list} key={data.id}/>
+      <Weather  props={data}  />
+      <Humidity wind={data.list} key={data.id}/>
+     </Fragment>
   );
 };

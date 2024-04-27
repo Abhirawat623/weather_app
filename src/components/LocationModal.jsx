@@ -27,17 +27,16 @@ export const LocationModal = () => {
 //submitting location
 const handleSubmitBtn= ()=>{
 
-  if(data){
-   
-    navigate("home")
-  }
-  else{
-    toast("Please type your location")
-  }
+location.length>0 ?
+(data?
+  navigate("home") && 
+  locationDispatch({
+    type:"LOCATION",
+    payload:""
+  }):
+
+  toast("No Result Found")):toast("Please type your state")
 }
-
-
-
 
  console.log(location)
   return (
