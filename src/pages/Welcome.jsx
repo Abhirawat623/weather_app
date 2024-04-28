@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom"
+import { Navbar } from "../components/Navbar"
 import { useModal } from "../context/modal-context"
 import { LocationModal } from "../components/LocationModal"
 import { Footer } from "../components/Footer"
@@ -18,9 +18,11 @@ setIsLocationModalOpen(true)
            <div className="object-fit h-102 w-102"><img src="./img_1.png"/></div>
            <button  className="bg-slate-800 text-white text-center rounded-md h-8 w-96 mb-4"
            onClick={handleLocationModal}>Today's Weather</button>
+            
         </div>
         
        <div> {isLocationModalOpen && <LocationModal />}</div>
+       <Navbar/>
        <Footer/>
        <Toaster/>
        </div>

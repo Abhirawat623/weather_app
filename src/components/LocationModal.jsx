@@ -46,7 +46,7 @@ location.length>0 ?
         flex flex-col  items-center h-64 w-96 xl:w-[35rem]
         absolute border-solid border-black border-2 bg-slate-800 rounded"
       >
-        <span className="material-symbols-outlined  text-white absolute right-1 top-1 cursor-pointer" onSubmit={handleLocationModalClose}>close</span>
+        <span className="material-symbols-outlined  text-white absolute right-1 top-1 cursor-pointer" onClick={handleLocationModalClose}>close</span>
         <div className="text-blue-300 text-4xl pt-14 ">Search Location</div>
         <input type="text" className="mt-10 w-80 h-7 block" onChange={handleLocationInput} />
         <button className="bg-green-500 text-white text-center rounded-md  h-8 w-24 mt-6"
